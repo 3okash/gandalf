@@ -102,7 +102,7 @@
                 <img src="assets/gandalf-logo.svg" alt="Gandalf's Smoke Shop Logo" class="logo-img">
             </a>
             
-            <button class="mobile-menu-btn" aria-label="Toggle Menu" onclick="document.querySelector('.nav-list').classList.toggle('active');var s=this.querySelector('svg');if(document.querySelector('.nav-list').classList.contains('active')){s.innerHTML='<line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line>';document.body.style.overflow='hidden'}else{s.innerHTML='<line x1=3 y1=12 x2=21 y2=12></line><line x1=3 y1=6 x2=21 y2=6></line><line x1=3 y1=18 x2=21 y2=18></line>';document.body.style.overflow=''}">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
             </button>
             <nav>
@@ -235,5 +235,22 @@
     
     <script src="main.js"></script>
     <script src="smoke.js"></script>
+
+    <script>
+    (function(){
+        var btn = document.getElementById('mobileMenuBtn');
+        var nav = document.querySelector('.nav-list');
+        if(btn && nav){
+            btn.addEventListener('click', function(){
+                nav.classList.toggle('active');
+                if(nav.classList.contains('active')){
+                    document.body.style.overflow='hidden';
+                } else {
+                    document.body.style.overflow='';
+                }
+            });
+        }
+    })();
+    </script>
 </body>
 </html>
