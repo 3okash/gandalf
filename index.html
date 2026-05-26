@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gandalf's Smoke Shop | Premium Vapes, Glass & Accessories</title>
+    <meta name="description" content="Your Sanctuary for Premium Smoke & Vape. Explore our extensive selection of glass, cigars, and vapes at Gandalf's in McMinnville & Seaside, OR, and Get It On in San Diego, CA.">
+    <meta name="keywords" content="Smoke Shop, Vape Shop, Glass Pipes, Premium Cigars, Disposable Vapes, Kratom, CBD, Oregon Smoke Shop, San Diego Smoke Shop, Gandalf's">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Gandalf's Smoke Shop | Premium Vapes, Glass & Accessories">
+    <meta property="og:description" content="Your Sanctuary for Premium Smoke & Vape. Visit our locations in McMinnville, Seaside, and San Diego.">
+    <meta property="og:image" content="https://gandalfssmokeshop.com/assets/illustration_hero.png">
+    <meta property="og:url" content="https://gandalfssmokeshop.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SmokeShop",
+      "name": "Gandalf's Smoke Shop",
+      "image": "https://gandalfssmokeshop.com/assets/logo.png",
+      "@id": "https://gandalfssmokeshop.com",
+      "url": "https://gandalfssmokeshop.com",
+      "telephone": "(503) 472-9880",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "635 Northeast, OR-99W suite c",
+        "addressLocality": "McMinnville",
+        "addressRegion": "OR",
+        "postalCode": "97128",
+        "addressCountry": "US"
+      },
+      "department": [
+        {
+          "@type": "SmokeShop",
+          "name": "Gandalf's Seaside",
+          "telephone": "(503) 717-0610",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "111 Broadway St Suite 14",
+            "addressLocality": "Seaside",
+            "addressRegion": "OR",
+            "postalCode": "97138",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "SmokeShop",
+          "name": "Get It On San Diego",
+          "telephone": "(858) 488-7440",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "3219 Mission Blvd",
+            "addressLocality": "San Diego",
+            "addressRegion": "CA",
+            "postalCode": "92109",
+            "addressCountry": "US"
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <script>
+        if (sessionStorage.getItem('gandalfs_age_verified') === 'true') {
+            document.documentElement.classList.add('age-verified');
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Premium Age Gate -->
+    <div id="age-gate" class="age-gate-overlay">
+        <div class="age-gate-card">
+            <img src="assets/logo.png" alt="Gandalf's Logo" class="age-gate-logo">
+            <h2 style="margin-bottom: 1rem;">Are you 21 or older?</h2>
+            <p style="color: var(--text-light); margin-bottom: 2rem;">You must be 21 years of age or older to view the premium products on this site.</p>
+            <div class="age-gate-buttons" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <button id="btn-yes-21" class="btn">Yes, I am 21+ <span class="btn-icon">→</span></button>
+                <a href="https://google.com" class="btn-outline" style="padding: 1rem 2.5rem; text-decoration: none; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Exit</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="top-banner">
+            Premium Locations in <a href="mcminnville.html">McMinnville OR</a>, <a href="seaside.html">Seaside OR</a> & <a href="san-diego.html">San Diego CA</a>
+        </div>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <!-- Using a clean text logo or the wizard logo -->
+                <img src="assets/logo.png" alt="Gandalf's Smoke Shop Logo" class="logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li class="dropdown">
+                        <a href="index.html#locations">Locations ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="seaside.html">Seaside Smoke Shop</a></li>
+                            <li><a href="mcminnville.html">McMinnville Smoke Shop</a></li>
+                            <li><a href="san-diego.html">Get It On San Diego</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products-we-carry.html">Products</a></li>
+                    <li><a href="contact-smoke-shop.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Main Hero Section -->
+        <section class="main-hero" style="position: relative; background: url('assets/illustration_hero.png') center/cover no-repeat; padding: 10rem 2rem; text-align: center; color: white; border-bottom: 4px solid var(--accent-gold);">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.40); z-index: 1;"></div>
+            <canvas id="smoke-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.6;"></canvas>
+            <div style="position: relative; z-index: 2;">
+                <h1 style="font-size: 4rem; color: white; margin-bottom: 1rem; font-family: var(--font-serif);">Gandalf's Smoke Shop</h1>
+                <p style="font-size: 1.5rem; color: rgba(255,255,255,0.9);">Your Sanctuary for Premium Smoke & Vape.</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="hero-section" id="about">
+            <div class="hero-content">
+                <h2 class="premium-title fade-up" style="font-size: 1.8rem; margin-bottom: 1.5rem;">A Sanctuary for the Senses</h2>
+                <p>In the enchanting realm of Oregon, there exists a haven known as Gandalf's Smoke & Vape Shop. Nestled in the bustling towns of McMinnville and Seaside, this extraordinary establishment captivates with its vast array of smoking and vaping treasures. Gandalf's is a sanctuary for those who seek the finer things in life.</p>
+                
+                <p>Our staff, renowned for their expertise and passion, are ready to guide and inspire you on your journey to find the perfect smoking or vaping companion. With unparalleled friendliness and a deep understanding of their craft, we ensure that every customer receives personalized attention.</p>
+                
+                <div style="margin-top: 3rem;">
+                    <a href="products-we-carry.html" class="btn">Explore Our Collection <span class="btn-icon">→</span></a>
+                </div>
+                
+                <div class="disclaimer">
+                    <p>All products are intended for legal dry herb or tobacco usage. You must be 21 years or older. Products shown on this website have not been evaluated by the FDA.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery / Visuals -->
+        <section class="gallery-section dark-premium-section">
+            <h2 class="premium-title fade-up">A Smoker's Paradise</h2>
+            <p class="sub-title">From well-known brands to everyday essentials, we offer everything you need to create an elevated smoke or vape experience.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item premium-card fade-up" style="background: white; padding: 0 0 1.5rem 0; overflow: hidden;">
+                    <img src="assets/illustration_glass.png" alt="Glass Pipes" style="width: 100%; height: 250px; object-fit: contain; padding: 2rem; border-bottom: 1px solid #eee;">
+                    <div class="gallery-label" style="font-size: 1.5rem; margin-top: 1rem; color: var(--accent-dark);">Artisan Glass</div>
+                </div>
+                <div class="gallery-item premium-card fade-up" style="background: white; padding: 0 0 1.5rem 0; overflow: hidden;">
+                    <img src="assets/illustration_papers.png" alt="Papers" style="width: 100%; height: 250px; object-fit: contain; padding: 2rem; border-bottom: 1px solid #eee;">
+                    <div class="gallery-label" style="font-size: 1.5rem; margin-top: 1rem; color: var(--accent-dark);">Premium Papers</div>
+                </div>
+                <div class="gallery-item premium-card fade-up" style="background: white; padding: 0 0 1.5rem 0; overflow: hidden;">
+                    <img src="assets/illustration_cigars.png" alt="Fresh Cigars" style="width: 100%; height: 250px; object-fit: contain; padding: 2rem; border-bottom: 1px solid #eee;">
+                    <div class="gallery-label" style="font-size: 1.5rem; margin-top: 1rem; color: var(--accent-dark);">Fine Cigars</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INVENTORY_START -->
+        <section class="gallery-section" style="padding-top: 4rem;">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 class="premium-title fade-up">Explore What We Carry</h2>
+                <p style="color: var(--text-light);">Select a category to view the latest products dropped directly from our store.</p>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-btn active" onclick="filterGallery('all')">All</button>
+                <button class="filter-btn" onclick="filterGallery('glass')">Glass</button>
+                <button class="filter-btn" onclick="filterGallery('vapes')">Vapes</button>
+                <button class="filter-btn" onclick="filterGallery('cigars')">Cigars</button>
+                <button class="filter-btn" onclick="filterGallery('apparel')">Apparel</button>
+                <button class="filter-btn" onclick="filterGallery('detox')">Detox</button>
+                <button class="filter-btn" onclick="filterGallery('accessories')">Accessories</button>
+            </div>
+
+            <div class="gallery-category active" id="gallery-all">
+                <div class="masonry-gallery">
+                    <div class="masonry-item"><img src="assets/inventory/glass/5eb8df_bd699507895d465e9db9f30de8ac745f~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/glass/5eb8df_e73b47ab974d4117bfc2921d4c57ef6d~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/glass/458ed5_31accb5dea2a4c10af4e7a8f582515ab~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/glass/5eb8df_49420b154b1b4be1a9c8583d77b7bb75~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/glass/5eb8df_2943adb75dae4258b93b2994e7e385a5~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/glass/premium_cigars.png" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/glass/5eb8df_aa0ea232adb245519dd924a6b1bb0a21~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/glass/5eb8df_548e5862422d4b3490dd7f2482ffa1b0~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/glass/5eb8df_36a33857809a4186ae2acd1e7b757ae0~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/vapes/5eb8df_cdc1e5e236854bf0bfb737d410dd018c~mv2.jpeg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/vapes/5eb8df_22a05ee1b7b940a993592b976be4913c~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/vapes/0a8a05_121705d6673143e5868daa398b1d9977~mv2_d_1728_2304_s_2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/vapes/premium_glass.png" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/vapes/5eb8df_9f1f91841b364a1b99badcb7e189ca3f~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/cigars/458ed5_feb3226a27b849ad95277684b6b124c9~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/cigars/5eb8df_ffc623dbdfe74393a9fdc6bd005179c5~mv2.jpeg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/cigars/5eb8df_6fbdc7a7608a4f82a2f42711f9803ba6~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/cigars/5eb8df_e8789d9aeacb4e4cb6b6ef8b74414832~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/cigars/5eb8df_425d94fa038b4b318c24e337af9fa74c~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/cigars/5eb8df_94f0f7912fd04a68bb599658f0c17283~mv2.jpeg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/cigars/5eb8df_c619fe93e01448f7bc420356cf8258ae~mv2.jpeg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_750e94669a4449f48246b502f58aed1f~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_89e2603ad3a94cfd938c9b66b40e9d41~mv2.jpeg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_7032abcd051e4c8ab11a967248f2d649~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_859079900e2747c6a818e4511127be22~mv2.png" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_88a9ed5bc8cd4f848dacf201745beee6~mv2.jpeg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/0a8a05_d5d5380b733649d684af6e524482d0c7~mv2_d_2160_2160_s_2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_5ea6a5fcf83f4132825c734f8ff5e196~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_2315c9a0525b49a8a7eeee1e6b8389ab~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_8ae7a9bb798d4ead9851ef9b0a140c36~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_4756457dbfab44809ef094a9e34659b5~mv2.jpeg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/0a8a05_5e363aed43da468f8aa4f74525ab3d53~mv2_d_2160_2160_s_2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/premium_apparel.png" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/detox/5eb8df_e891aa20d4f54ce89e5d24a5d21e3cd0~mv2.jpeg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/detox/458ed5_8fc6580c06634d09bbd1cc305e86ae67~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/detox/5eb8df_7a1521bbfa7e4b808ce72671a5049cc0~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/detox/5eb8df_ab0e971c6eb2482a8aa2dddd9697ea00~mv2.png" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/detox/5eb8df_08fb201af6b54f01b89372c071a9f8a7~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/detox/5eb8df_0661fb6301fe4707afbb3d03a66e819f~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/detox/5eb8df_52a7a34161bb4e80a7436f9af98d789e~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/accessories/5eb8df_b3c9edba22ca48acbd79cf17f92eff82~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/accessories/5eb8df_354b62ffadfe4bcfb78bb53e601386b7~mv2.jpeg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/accessories/0a8a05_9dbce680e03d41b1a99782fc665bdfc0~mv2.jpeg" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/accessories/premium_detox.png" alt="Product Image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/accessories/5eb8df_07cab72693e446de9e3a8d07fe349696~mv2.jpg" alt="Product Image" loading="lazy"></div>
+                </div>
+            </div>
+
+            <div class="gallery-category" id="gallery-glass">
+                <div class="masonry-gallery">
+                    <div class="masonry-item"><img src="assets/inventory/glass/5eb8df_bd699507895d465e9db9f30de8ac745f~mv2.jpg" alt="Glass" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/glass/5eb8df_e73b47ab974d4117bfc2921d4c57ef6d~mv2.jpg" alt="Glass" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/glass/458ed5_31accb5dea2a4c10af4e7a8f582515ab~mv2.jpg" alt="Glass" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/glass/5eb8df_49420b154b1b4be1a9c8583d77b7bb75~mv2.jpg" alt="Glass" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/glass/5eb8df_2943adb75dae4258b93b2994e7e385a5~mv2.jpg" alt="Glass" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/glass/premium_cigars.png" alt="Glass" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/glass/5eb8df_aa0ea232adb245519dd924a6b1bb0a21~mv2.jpg" alt="Glass" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/glass/5eb8df_548e5862422d4b3490dd7f2482ffa1b0~mv2.jpg" alt="Glass" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/glass/5eb8df_36a33857809a4186ae2acd1e7b757ae0~mv2.jpg" alt="Glass" loading="lazy"></div>
+                </div>
+            </div>
+
+            <div class="gallery-category" id="gallery-vapes">
+                <div class="masonry-gallery">
+                    <div class="masonry-item"><img src="assets/inventory/vapes/5eb8df_cdc1e5e236854bf0bfb737d410dd018c~mv2.jpeg" alt="Vapes" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/vapes/5eb8df_22a05ee1b7b940a993592b976be4913c~mv2.jpg" alt="Vapes" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/vapes/0a8a05_121705d6673143e5868daa398b1d9977~mv2_d_1728_2304_s_2.jpg" alt="Vapes" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/vapes/premium_glass.png" alt="Vapes" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/vapes/5eb8df_9f1f91841b364a1b99badcb7e189ca3f~mv2.jpg" alt="Vapes" loading="lazy"></div>
+                </div>
+            </div>
+
+            <div class="gallery-category" id="gallery-cigars">
+                <div class="masonry-gallery">
+                    <div class="masonry-item"><img src="assets/inventory/cigars/458ed5_feb3226a27b849ad95277684b6b124c9~mv2.jpg" alt="Cigars" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/cigars/5eb8df_ffc623dbdfe74393a9fdc6bd005179c5~mv2.jpeg" alt="Cigars" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/cigars/5eb8df_6fbdc7a7608a4f82a2f42711f9803ba6~mv2.jpg" alt="Cigars" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/cigars/5eb8df_e8789d9aeacb4e4cb6b6ef8b74414832~mv2.jpg" alt="Cigars" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/cigars/5eb8df_425d94fa038b4b318c24e337af9fa74c~mv2.jpg" alt="Cigars" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/cigars/5eb8df_94f0f7912fd04a68bb599658f0c17283~mv2.jpeg" alt="Cigars" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/cigars/5eb8df_c619fe93e01448f7bc420356cf8258ae~mv2.jpeg" alt="Cigars" loading="lazy"></div>
+                </div>
+            </div>
+
+            <div class="gallery-category" id="gallery-apparel">
+                <div class="masonry-gallery">
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_750e94669a4449f48246b502f58aed1f~mv2.jpg" alt="Apparel" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_89e2603ad3a94cfd938c9b66b40e9d41~mv2.jpeg" alt="Apparel" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_7032abcd051e4c8ab11a967248f2d649~mv2.jpg" alt="Apparel" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_859079900e2747c6a818e4511127be22~mv2.png" alt="Apparel" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_88a9ed5bc8cd4f848dacf201745beee6~mv2.jpeg" alt="Apparel" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/0a8a05_d5d5380b733649d684af6e524482d0c7~mv2_d_2160_2160_s_2.jpg" alt="Apparel" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_5ea6a5fcf83f4132825c734f8ff5e196~mv2.jpg" alt="Apparel" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_2315c9a0525b49a8a7eeee1e6b8389ab~mv2.jpg" alt="Apparel" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_8ae7a9bb798d4ead9851ef9b0a140c36~mv2.jpg" alt="Apparel" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/5eb8df_4756457dbfab44809ef094a9e34659b5~mv2.jpeg" alt="Apparel" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/0a8a05_5e363aed43da468f8aa4f74525ab3d53~mv2_d_2160_2160_s_2.jpg" alt="Apparel" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/apparel/premium_apparel.png" alt="Apparel" loading="lazy"></div>
+                </div>
+            </div>
+
+            <div class="gallery-category" id="gallery-detox">
+                <div class="masonry-gallery">
+                    <div class="masonry-item"><img src="assets/inventory/detox/5eb8df_e891aa20d4f54ce89e5d24a5d21e3cd0~mv2.jpeg" alt="Detox" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/detox/458ed5_8fc6580c06634d09bbd1cc305e86ae67~mv2.jpg" alt="Detox" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/detox/5eb8df_7a1521bbfa7e4b808ce72671a5049cc0~mv2.jpg" alt="Detox" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/detox/5eb8df_ab0e971c6eb2482a8aa2dddd9697ea00~mv2.png" alt="Detox" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/detox/5eb8df_08fb201af6b54f01b89372c071a9f8a7~mv2.jpg" alt="Detox" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/detox/5eb8df_0661fb6301fe4707afbb3d03a66e819f~mv2.jpg" alt="Detox" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/detox/5eb8df_52a7a34161bb4e80a7436f9af98d789e~mv2.jpg" alt="Detox" loading="lazy"></div>
+                </div>
+            </div>
+
+            <div class="gallery-category" id="gallery-accessories">
+                <div class="masonry-gallery">
+                    <div class="masonry-item"><img src="assets/inventory/accessories/5eb8df_b3c9edba22ca48acbd79cf17f92eff82~mv2.jpg" alt="Accessories" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/accessories/5eb8df_354b62ffadfe4bcfb78bb53e601386b7~mv2.jpeg" alt="Accessories" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/accessories/0a8a05_9dbce680e03d41b1a99782fc665bdfc0~mv2.jpeg" alt="Accessories" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/accessories/premium_detox.png" alt="Accessories" loading="lazy"></div>
+                    <div class="masonry-item"><img src="assets/inventory/accessories/5eb8df_07cab72693e446de9e3a8d07fe349696~mv2.jpg" alt="Accessories" loading="lazy"></div>
+                </div>
+            </div>
+
+
+        </section>
+        
+        <script>
+        function filterGallery(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            document.querySelectorAll('.gallery-category').forEach(gal => {
+                gal.classList.remove('active');
+            });
+            document.getElementById('gallery-' + category).classList.add('active');
+        }
+        </script>
+        <!-- INVENTORY_END -->
+
+    
+
+        <!-- Locations -->
+        <section class="locations-section" id="locations">
+            <h2 class="premium-title fade-up">Visit Our Boutiques</h2>
+            <div class="locations-grid">
+                <div class="location-card premium-card fade-up">
+                    <h3 class="location-title">McMinnville</h3>
+                    <p style="color: var(--accent-gold); margin-bottom: 1rem;">Gandalf's Smoke & Vape</p>
+                    <div style="border-radius: 8px; overflow: hidden; height: 180px; margin-bottom: 1.5rem; background: #eee;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2806.9658242042125!2d-123.1953181232819!3d45.20790515182967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54954203975fa9cf%3A0xc622839b0394c8e7!2sGandalf&#39;s%20Smoke%20%26%20Vape%20Shop!5e0!3m2!1sen!2sus!4v1716584288019!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <p class="location-address">635 Northeast, OR-99W suite c<br>McMinnville, OR 97128</p>
+                    <a href="mcminnville.html" class="btn btn-outline">View Details</a>
+                </div>
+
+                <div class="location-card premium-card fade-up">
+                    <h3 class="location-title">Seaside</h3>
+                    <p style="color: var(--accent-gold); margin-bottom: 1rem;">Gandalf's Smoke & Vape</p>
+                    <div style="border-radius: 8px; overflow: hidden; height: 180px; margin-bottom: 1.5rem; background: #eee;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2777.674872146522!2d-123.93175822324905!3d45.99778215582313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5494a53ed3a7e583%3A0x67db495c0228e932!2sGandalf&#39;s%20Smoke%20Shop!5e0!3m2!1sen!2sus!4v1716584443187!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <p class="location-address">111 Broadway St Suite 14<br>Seaside, OR 97138</p>
+                    <a href="seaside.html" class="btn btn-outline">View Details</a>
+                </div>
+
+                <div class="location-card premium-card fade-up">
+                    <h3 class="location-title">San Diego</h3>
+                    <p style="color: var(--accent-gold); margin-bottom: 1rem;">Get It On</p>
+                    <div style="border-radius: 8px; overflow: hidden; height: 180px; margin-bottom: 1.5rem; background: #eee;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.4867160753066!2d-117.25368502388307!3d32.77926118252277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc01b7a2bb036d%3A0x33cf46114842cc7a!2sGet%20It%20On%20Smoke%20Shop!5e0!3m2!1sen!2sus!4v1716584465492!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <p class="location-address">3217 Mission Blvd<br>San Diego, CA 92109</p>
+                    <a href="san-diego.html" class="btn btn-outline">View Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter-section">
+            <div class="newsletter-content">
+                <h2 class="premium-title fade-up" style="color: #fff; margin-bottom: 1rem;">The Higher Shire Club</h2>
+                <p>Subscribe for exclusive news, new arrivals, and special promotions.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn" style="background: #fff; color: var(--accent-dark);">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+                <div class="footer-social" style="display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2rem;">
+            <a href="https://www.instagram.com/gandalfsss/" style="color: var(--text-light); transition: color 0.3s;" onmouseover="this.style.color='var(--accent-orange)'" onmouseout="this.style.color='var(--text-light)'">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/gandalfsss/" style="color: var(--text-light); transition: color 0.3s;" onmouseover="this.style.color='var(--accent-orange)'" onmouseout="this.style.color='var(--text-light)'">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <h2 style="font-family: var(--font-serif); color: var(--text-light); margin-bottom: 1rem;">#gandalfsss</h2>
+            <p>&copy; 2026 Gandalf's Smoke Shop. All rights reserved.</p>
+            <a href="https://moksha.agency" target="_blank" style="margin-top: 1.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; opacity: 0.7; transition: opacity 0.3s ease; text-decoration: none; color: inherit;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+                <span style="font-size: 0.85rem; letter-spacing: 1.5px; font-weight: 500; text-transform: uppercase;">Powered by Moksha</span>
+                
+            </a>
+
+        </div>
+    </footer>
+
+    
+    <!-- Lightbox Overlay -->
+    <div id="product-lightbox" class="lightbox-overlay">
+        <button class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+        <img id="lightbox-img" src="" alt="Expanded Product">
+    </div>
+
+    <script src="main.js"></script>
+    <script src="smoke.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gandalf's Smoke Shop | McMinnville</title>
+    <meta name="description" content="Your Sanctuary for Premium Smoke & Vape. Explore our extensive selection of glass, cigars, and vapes at Gandalf's in McMinnville & Seaside, OR, and Get It On in San Diego, CA.">
+    <meta name="keywords" content="Smoke Shop, Vape Shop, Glass Pipes, Premium Cigars, Disposable Vapes, Kratom, CBD, Oregon Smoke Shop, San Diego Smoke Shop, Gandalf's">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Gandalf's Smoke Shop | Premium Vapes, Glass & Accessories">
+    <meta property="og:description" content="Your Sanctuary for Premium Smoke & Vape. Visit our locations in McMinnville, Seaside, and San Diego.">
+    <meta property="og:image" content="https://gandalfssmokeshop.com/assets/illustration_hero.png">
+    <meta property="og:url" content="https://gandalfssmokeshop.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SmokeShop",
+      "name": "Gandalf's Smoke Shop",
+      "image": "https://gandalfssmokeshop.com/assets/logo.png",
+      "@id": "https://gandalfssmokeshop.com",
+      "url": "https://gandalfssmokeshop.com",
+      "telephone": "(503) 472-9880",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "635 Northeast, OR-99W suite c",
+        "addressLocality": "McMinnville",
+        "addressRegion": "OR",
+        "postalCode": "97128",
+        "addressCountry": "US"
+      },
+      "department": [
+        {
+          "@type": "SmokeShop",
+          "name": "Gandalf's Seaside",
+          "telephone": "(503) 717-0610",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "111 Broadway St Suite 14",
+            "addressLocality": "Seaside",
+            "addressRegion": "OR",
+            "postalCode": "97138",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "SmokeShop",
+          "name": "Get It On San Diego",
+          "telephone": "(858) 488-7440",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "3219 Mission Blvd",
+            "addressLocality": "San Diego",
+            "addressRegion": "CA",
+            "postalCode": "92109",
+            "addressCountry": "US"
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <script>
+        if (sessionStorage.getItem('gandalfs_age_verified') === 'true') {
+            document.documentElement.classList.add('age-verified');
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Premium Age Gate -->
+    <div id="age-gate" class="age-gate-overlay">
+        <div class="age-gate-card">
+            <img src="assets/logo.png" alt="Gandalf's Logo" class="age-gate-logo">
+            <h2 style="margin-bottom: 1rem;">Are you 21 or older?</h2>
+            <p style="color: var(--text-light); margin-bottom: 2rem;">You must be 21 years of age or older to view the premium products on this site.</p>
+            <div class="age-gate-buttons" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <button id="btn-yes-21" class="btn">Yes, I am 21+ <span class="btn-icon">→</span></button>
+                <a href="https://google.com" class="btn-outline" style="padding: 1rem 2.5rem; text-decoration: none; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Exit</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="top-banner">
+            Premium Locations in <a href="mcminnville.html">McMinnville OR</a>, <a href="seaside.html">Seaside OR</a> & <a href="san-diego.html">San Diego CA</a>
+        </div>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Gandalf's Smoke Shop Logo" class="logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li class="dropdown">
+                        <a href="index.html#locations" class="active">Locations ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="seaside.html">Seaside Smoke Shop</a></li>
+                            <li><a href="mcminnville.html">McMinnville Smoke Shop</a></li>
+                            <li><a href="san-diego.html">Get It On San Diego</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products-we-carry.html">Products</a></li>
+                    <li><a href="contact-smoke-shop.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>        <main>
+        <section class="location-hero" style="background: url('assets/illustration_hero.png') center/cover no-repeat; padding: 8rem 2rem; text-align: center; color: white; position: relative;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1;"></div>
+            <canvas id="smoke-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.6;"></canvas>
+            <div style="position: relative; z-index: 2;">
+                <h1 class="premium-title fade-up" style="color: white; font-size: 3.5rem; margin-bottom: 0.5rem;">Gandalf's McMinnville</h1>
+                <p class="sub-title" style="color: rgba(255,255,255,0.9); font-size: 1.2rem;">Oregon's Wine Country Premier Smoke Shop</p>
+            </div>
+        </section>
+
+        <!-- Main Details -->
+        <section style="padding: 5rem 2rem; background: var(--bg-primary);">
+            <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 4rem; align-items: center;">
+                
+                <!-- Map -->
+                <div style="border-radius: 12px; overflow: hidden; height: 500px; box-shadow: var(--shadow-subtle);">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2806.9658242042125!2d-123.1953181232819!3d45.20790515182967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54954203975fa9cf%3A0xc622839b0394c8e7!2sGandalf&#39;s%20Smoke%20%26%20Vape%20Shop!5e0!3m2!1sen!2sus!4v1716584288019!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <!-- Info -->
+                <div class="premium-card" style="padding: 3rem;">
+                    <h2 style="font-family: var(--font-serif); font-size: 2rem; color: var(--accent-dark); margin-bottom: 1.5rem;">Visit Us Today</h2>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--accent-dark); font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Address</h4>
+                        <p style="color: var(--text-light); font-size: 1.1rem;">635 Northeast, OR-99W suite c<br>McMinnville, OR 97128</p>
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--accent-dark); font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Contact</h4>
+                        <p style="color: var(--text-light); font-size: 1.1rem;"><a href="tel:5034729880" style="color: var(--accent-orange); font-weight: 600;">(503) 472-9880</a></p>
+                    </div>
+
+                    <div style="margin-bottom: 2.5rem;">
+                        <h4 style="color: var(--accent-dark); font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Store Hours</h4>
+                        <ul style="color: var(--text-light); font-size: 1.1rem; list-style: none; padding: 0;">
+                            <li style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;"><span>Mon - Sat:</span> <span>9:00 AM - 10:00 PM</span></li>
+                            <li style="display: flex; justify-content: space-between;"><span>Sunday:</span> <span>10:00 AM - 8:00 PM</span></li>
+                        </ul>
+                    </div>
+
+                    <a href="https://maps.google.com" target="_blank" class="btn" style="width: 100%; text-align: center; padding: 1.2rem;">Get Directions</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Amenities / What We Carry -->
+        <section style="padding: 4rem 2rem; background: var(--bg-secondary);">
+            <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+                <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--accent-dark); margin-bottom: 2rem;">Available at this Location</h3>
+                <div class="pill-container" style="justify-content: center;">
+                    <span class="pill-tag fade-up">Premium Cigars</span>
+                    <span class="pill-tag fade-up">Disposable Vapes</span>
+                    <span class="pill-tag fade-up">Artisan Glass Pipes</span>
+                    <span class="pill-tag fade-up">Rolling Papers & Wraps</span>
+                    <span class="pill-tag fade-up">Grinders & Accessories</span>
+                    <span class="pill-tag fade-up">Kratom & CBD</span>
+                    <span class="pill-tag fade-up">Apparel</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+                <div class="footer-social" style="display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2rem;">
+            <a href="https://www.instagram.com/gandalfsss/" style="color: var(--text-light); transition: color 0.3s;" onmouseover="this.style.color='var(--accent-orange)'" onmouseout="this.style.color='var(--text-light)'">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/gandalfsss/" style="color: var(--text-light); transition: color 0.3s;" onmouseover="this.style.color='var(--accent-orange)'" onmouseout="this.style.color='var(--text-light)'">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <h2 style="font-family: var(--font-serif); color: var(--text-light); margin-bottom: 1rem;">#gandalfsss</h2>
+            <p>&copy; 2026 Gandalf's Smoke Shop. All rights reserved.</p>
+            <a href="https://moksha.agency" target="_blank" style="margin-top: 1.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; opacity: 0.7; transition: opacity 0.3s ease; text-decoration: none; color: inherit;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+                <span style="font-size: 0.85rem; letter-spacing: 1.5px; font-weight: 500; text-transform: uppercase;">Powered by Moksha</span>
+                
+            </a>
+
+        </div>
+    </footer>
+
+    
+    <script src="main.js"></script>
+    <script src="smoke.js"></script>
+</body>
+</html>
