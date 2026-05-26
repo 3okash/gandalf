@@ -768,25 +768,35 @@ html.age-verified .age-gate-overlay {
 }
 
 @media (max-width: 768px) {
-    .mobile-menu-btn {
-        display: block;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        gap: 0;
     }
 
-    .nav-container {
-        padding: 1rem;
-        gap: 0.5rem;
+    .mobile-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
+        width: 44px;
+        height: 44px;
     }
 
     .logo-img {
-        height: 80px;
+        height: 55px;
+    }
+
+    .main-header.scrolled .nav-container {
+        padding: 0.3rem 1rem;
+        gap: 0;
     }
 
     .main-header.scrolled .logo-img {
-        height: 60px;
-        padding: 5px 0;
+        height: 45px;
+        padding: 0;
     }
     
     .nav-list {
