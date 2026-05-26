@@ -170,6 +170,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1.5rem 2rem 1rem;
     gap: 1.5rem;
     transition: all 0.3s ease;
+    position: relative;
 }
 
 .main-header.scrolled .nav-container {
@@ -180,6 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 .logo-img {
     height: 150px;
     width: auto;
+    max-width: 100%;
     transition: all 0.3s ease;
 }
 
@@ -696,6 +698,8 @@ html.age-verified .age-gate-overlay {
 
 .age-gate-logo {
     height: 100px;
+    max-width: 80%;
+    object-fit: contain;
     margin-bottom: 2rem;
 }
 
@@ -766,6 +770,23 @@ html.age-verified .age-gate-overlay {
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .nav-container {
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    .logo-img {
+        height: 80px;
+    }
+
+    .main-header.scrolled .logo-img {
+        height: 60px;
+        padding: 5px 0;
     }
     
     .nav-list {
@@ -786,6 +807,10 @@ html.age-verified .age-gate-overlay {
     .nav-list.active {
         right: 0;
     }
+
+    .nav-list::before {
+        display: none;
+    }
     
     .dropdown-menu {
         position: static;
@@ -800,7 +825,65 @@ html.age-verified .age-gate-overlay {
         display: block;
     }
     
-    /* Layout Adjustments */
+    /* Age Gate */
+    .age-gate-card {
+        padding: 2rem 1.5rem;
+        width: 92%;
+        max-width: 400px;
+    }
+
+    .age-gate-logo {
+        height: 70px;
+        max-width: 70%;
+        margin-bottom: 1.5rem;
+    }
+
+    .age-gate-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .age-gate-card p {
+        font-size: 0.9rem;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 60vh;
+        padding: 4rem 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .premium-title {
+        font-size: 1.8rem;
+    }
+
+    .sub-title {
+        font-size: 1rem;
+    }
+
+    /* Location cards */
+    .locations-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .location-card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Product cards */
+    .product-card {
+        flex-direction: column;
+    }
+
+    /* Masonry */
     .masonry-gallery {
         columns: 1;
     }
@@ -808,13 +891,30 @@ html.age-verified .age-gate-overlay {
     .gallery-grid {
         grid-template-columns: 1fr;
     }
-    
-    .hero h1 {
-        font-size: 3rem;
+
+    /* Newsletter */
+    .newsletter-section {
+        padding: 3rem 1.5rem;
     }
-    
-    .premium-title {
-        font-size: 2.5rem;
+
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter-form input {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Filter tabs */
+    .filter-tabs {
+        gap: 0.4rem;
+    }
+
+    .filter-btn {
+        padding: 0.4rem 0.9rem;
+        font-size: 0.75rem;
     }
     
     .footer-content {
@@ -824,5 +924,33 @@ html.age-verified .age-gate-overlay {
     
     .social-links {
         justify-content: center;
+    }
+
+    /* Store page hero logos */
+    .location-hero img {
+        height: 70px !important;
+    }
+
+    .location-hero h1 {
+        font-size: 2rem !important;
+    }
+
+    .location-hero p {
+        font-size: 1rem !important;
+    }
+
+    /* Products page hero */
+    .products-hero h1 {
+        font-size: 2rem;
+    }
+
+    .products-hero p {
+        font-size: 1rem;
+    }
+
+    /* Top banner */
+    .top-banner {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.5rem;
     }
 }
