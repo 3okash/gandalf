@@ -102,7 +102,7 @@
                 <img src="assets/gandalf-logo.svg" alt="Gandalf's Smoke Shop Logo" class="logo-img">
             </a>
             
-            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+            <button class="mobile-menu-btn" aria-label="Toggle Menu" onclick="document.querySelector('.nav-list').classList.toggle('active');var s=this.querySelector('svg');if(document.querySelector('.nav-list').classList.contains('active')){s.innerHTML='<line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line>';document.body.style.overflow='hidden'}else{s.innerHTML='<line x1=3 y1=12 x2=21 y2=12></line><line x1=3 y1=6 x2=21 y2=6></line><line x1=3 y1=18 x2=21 y2=18></line>';document.body.style.overflow=''}">
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
             </button>
             <nav>
@@ -342,13 +342,13 @@
             </div>
 
             <div class="filter-tabs">
-                <button class="filter-btn active" onclick="filterGallery('all')">All</button>
-                <button class="filter-btn" onclick="filterGallery('glass')">Glass</button>
-                <button class="filter-btn" onclick="filterGallery('vapes')">Vapes</button>
-                <button class="filter-btn" onclick="filterGallery('cigars')">Cigars</button>
-                <button class="filter-btn" onclick="filterGallery('apparel')">Apparel</button>
-                <button class="filter-btn" onclick="filterGallery('detox')">Detox</button>
-                <button class="filter-btn" onclick="filterGallery('accessories')">Accessories</button>
+                <button class="filter-btn active" onclick="filterGallery('all', event)">All</button>
+                <button class="filter-btn" onclick="filterGallery('glass', event)">Glass</button>
+                <button class="filter-btn" onclick="filterGallery('vapes', event)">Vapes</button>
+                <button class="filter-btn" onclick="filterGallery('cigars', event)">Cigars</button>
+                <button class="filter-btn" onclick="filterGallery('apparel', event)">Apparel</button>
+                <button class="filter-btn" onclick="filterGallery('detox', event)">Detox</button>
+                <button class="filter-btn" onclick="filterGallery('accessories', event)">Accessories</button>
             </div>
 
             <div class="gallery-category active" id="gallery-all">

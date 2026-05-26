@@ -143,15 +143,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
 // Global Gallery Filter
-function filterGallery(category) {
-            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            document.querySelectorAll('.gallery-category').forEach(gal => {
-                gal.classList.remove('active');
-            });
-            document.getElementById('gallery-' + category).classList.add('active');
-        }
-        
+function filterGallery(category, e) {
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    if (e && e.target) e.target.classList.add('active');
+    
+    document.querySelectorAll('.gallery-category').forEach(gal => {
+        gal.classList.remove('active');
+    });
+    var el = document.getElementById('gallery-' + category);
+    if (el) el.classList.add('active');
+}
