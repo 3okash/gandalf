@@ -94,6 +94,53 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- Mobile Menu Toggle ---
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const navList = document.querySelector('.nav-list');
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    if (mobileBtn && navList) {
+        mobileBtn.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            
+            // Transform hamburger to X
+            const svg = mobileBtn.querySelector('svg');
+            if (navList.classList.contains('active')) {
+                svg.innerHTML = '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>';
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            } else {
+                svg.innerHTML = '<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Handle dropdown clicks on mobile
+        dropdowns.forEach(dropdown => {
+            const dropdownLink = dropdown.querySelector('a');
+            if (dropdownLink) {
+                dropdownLink.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault(); 
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            }
+        });
+        
+        // Close menu when clicking a standard link
+        const navLinks = navList.querySelectorAll('li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // If it's not the dropdown toggle link, close menu
+                if (window.innerWidth <= 768 && !link.parentElement.classList.contains('dropdown')) {
+                    navList.classList.remove('active');
+                    mobileBtn.querySelector('svg').innerHTML = '<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    }
 });
 
 
