@@ -241,6 +241,17 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
 }
 
+/* Hover bridge to prevent losing hover state when cursor moves to the dropdown menu */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: transparent;
+}
+
 .dropdown-menu li a {
     display: block;
     padding: 0.8rem 2rem;
