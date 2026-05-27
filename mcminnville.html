@@ -212,21 +212,6 @@
     <script src="main.js"></script>
     <script src="smoke.js"></script>
 
-    <script>
-    (function(){
-        var btn = document.getElementById('mobileMenuBtn');
-        var nav = document.querySelector('.nav-list');
-        if(btn && nav){
-            btn.addEventListener('click', function(){
-                nav.classList.toggle('active');
-                if(nav.classList.contains('active')){
-                    document.body.style.overflow='hidden';
-                } else {
-                    document.body.style.overflow='';
-                }
-            });
-        }
-    })();
-    </script>
+
 </body>
 </html>
