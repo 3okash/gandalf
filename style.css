@@ -355,46 +355,135 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--accent-dark);
 }
 
-/* Locations */
+/* Locations Section & Cards Redesign */
 .locations-section {
-    padding: 6rem 2rem;
-    background: var(--bg-primary);
+    padding: 7rem 2rem;
+    background: radial-gradient(circle at top, #fafbfa 0%, #f0f2f0 100%);
 }
 
 .locations-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.location-card {
-    padding: 3rem 2rem;
+.location-card.premium-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    padding: 3rem 2rem 2.5rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
 }
 
-.location-badge {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 1.5rem;
-    border: 3px solid var(--accent-gold);
+.location-card.premium-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-gold), var(--accent-orange));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.location-card.premium-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: rgba(26, 123, 57, 0.2);
+}
+
+.location-card.premium-card:hover::before {
+    opacity: 1;
 }
 
 .location-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--accent-dark);
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Unified Logo Wrapper/Aspect */
+.location-card > img {
+    height: 48px;
+    max-width: 80%;
+    object-fit: contain;
+    margin: 0 0 2rem 0 !important;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
+    transition: transform 0.3s ease;
+}
+
+.location-card:hover > img {
+    transform: scale(1.05);
+}
+
+/* Map Container Styling */
+.location-card > div {
+    width: 100%;
+    border-radius: 12px !important;
+    border: 1px solid rgba(0,0,0,0.08) !important;
+    overflow: hidden;
+    height: 180px;
+    margin-bottom: 2rem !important;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.05), 0 4px 12px rgba(0,0,0,0.02);
+    position: relative;
+}
+
+/* Premium Map Filter Effect */
+.location-card > div > iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: grayscale(0.85) contrast(1.1) brightness(0.95) sepia(0.08);
+    transition: filter 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.location-card:hover > div > iframe {
+    filter: grayscale(0) contrast(1) brightness(1) sepia(0);
 }
 
 .location-address {
+    font-size: 1rem;
     color: var(--text-light);
-    margin-bottom: 2rem;
+    line-height: 1.5;
+    margin-bottom: 2rem !important;
     flex-grow: 1;
+    font-weight: 400;
+}
+
+/* Clean, Premium CTA Buttons */
+.location-card .btn-outline {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.8rem 2rem;
+    border: 2px solid var(--accent-gold);
+    color: var(--accent-gold);
+    background: transparent;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: none !important;
+}
+
+.location-card:hover .btn-outline {
+    background: var(--accent-gold);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(26, 123, 57, 0.25) !important;
+    border-color: var(--accent-gold);
 }
 
 /* Newsletter */
